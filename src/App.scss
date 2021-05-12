@@ -174,5 +174,72 @@
         display: grid;
         place-items: center;
         background-color: #2b2e4a;
+        padding:5rem 0;
+        .projects-container{
+            background-color: #34487acc;
+            min-height: 70vh;
+            width: 75vw;
+            overflow-x: hidden;
+            .project{                   
+                display: grid;
+                grid-template-columns: 1fr 1.3fr;
+                grid-template-areas: 
+                "pImg text"
+                ;
+                &:nth-child(even){
+                    grid-template-columns: 1.3fr 1fr;
+                    grid-template-areas: 
+                    "text pImg"
+                    ;
+                }
+                @media only screen and (max-width:768px){
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr 1fr;
+                    grid-template-areas: 
+                    "text"
+                    "pImg"
+                    ;
+                    &:nth-child(even){
+                        grid-template-columns: 1fr;
+                        grid-template-rows: 1fr 1fr;
+                        grid-template-areas: 
+                        "text"
+                        "pImg"
+                        ;
+                    }
+                }
+                .p-img{
+                    grid-area: pImg;
+                    img{
+                        object-fit: contain;
+                        width: 100%;
+                    }
+                }
+                .textarea{
+                    grid-area: text;
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 1rem;
+                    .title{
+                        color:white;
+                    }
+                    .text{
+                        color:white;
+                        padding:2rem .5rem;
+                    }
+                    .textarea-icons{
+                        display:flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        align-items: center;
+                        gap:1rem;
+                        font-size: 20px;
+                        color:white;
+                    }
+                }
+            }
+        }
     }
 }
