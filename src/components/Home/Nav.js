@@ -12,50 +12,35 @@ export default function Nav() {
         setClick(false);
     });
     //#endregion
-
     
-    /*//#region Navbar Opacity
-    const[op,setOp]=useState(0);  
-
+    //#region NavBg
+    const [scrollY, setScrollY] = useState(0);
+    function getY() {
+        setScrollY(window.pageYOffset / 650);
+    }
     
-
-    //#region Detect Scrolling Direction
-    const [y, setY] = useState(window.scrollY);
-
-    const handleNavigation = useCallback(
-        e => {
-            const window = e.currentTarget; 
-            if (y < window.scrollY && op+1 <= 1){
-                setOp(op+1);
-                console.log(op);
-            }
-            if (y > window.scrollY && op-1 >= 0){
-                setOp(op-1);
-                console.log(op);
-            }        
-            
-            setY(window.scrollY);
-        }, [y]
-    );
-
     useEffect(() => {
-        setY(window.scrollY);
-        window.addEventListener("scroll", handleNavigation);
-
+        window.addEventListener("scroll", getY);
         return () => {
-            window.removeEventListener("scroll", handleNavigation);
+          window.removeEventListener("scroll", getY);
         };
+    });  
         
-    }, [handleNavigation]);
-    //#endregion 
-*/
+        
+    //#endregion
     
 
-    //#endregion
+    
+    const scrollToTop = () => {
+        window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+        });
+    };
 
     return (
-        <div className='nav'>
-            <i className="logo fab fa-wolf-pack-battalion"></i>
+        <div className='nav' style={{background:`rgba(34, 40, 49, ${scrollY})`}}>
+            <i onClick={scrollToTop} className="logo fab fa-wolf-pack-battalion"></i>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                 <Link onClick={closeMenu} className="nav-link" to="projects" spy={true} smooth={true} offset={50} duration={500}>
                     Munkáim

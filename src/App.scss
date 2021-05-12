@@ -4,31 +4,25 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-//firefox
 :root{
     scrollbar-color: #c8c8c8 #313131 !important;
     scrollbar-width: thin !important;
 }
-//everything else
-/* width */
 ::-webkit-scrollbar {
     width: 7px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
+}
+        
+::-webkit-scrollbar-track {
     background: #313131;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+        
+::-webkit-scrollbar-thumb {
     background: #c8c8c8;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #d4d4d4; 
-  }
+    &:hover {
+        background: #eeeeee; 
+    }
+}
+   
 .App{    
     .bg{
         width: 100vw;
@@ -75,6 +69,7 @@
             ". logo . menu-icon .";        
         }
         .logo{
+            cursor: pointer;
             grid-area: logo;
             font-size: clamp(2.3rem, 5vw, 3rem);
         }
@@ -148,13 +143,45 @@
         display: grid;
         place-items: center;
         .home-content{
-            text-align: center;
             padding: 0 0 20vh 0;
             h1{
                 font-size: clamp(2.5rem, 8vw, 3.5rem);
             }
             h3{
                 font-size: clamp(1.4rem, 5vw, 2rem);
+                margin:.5rem 0 1.5rem 0;
+            }
+            .home-btn button {
+                cursor: pointer;
+                font-size: clamp(1rem, 4vw, 1.3rem);
+                background: #3498db;
+                color: #fff;
+                border: 2px solid #3498db;
+                padding: .8rem 1.3rem;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+                &:hover {
+                    color: #3498db;
+                    &::after {
+                        transition: all 0.3s ease-out;
+                        transform: skewX(-45deg) scale(1, 1);
+                    }
+                }
+                &::after {
+                    content: "";
+                    background: #ecf0f1;
+                    position: absolute;
+                    z-index: -1;
+                    padding: 1rem 1.5rem;
+                    display: block;
+                    transition: all 0.3s ease;
+                    left: -20%;
+                    right: -20%;
+                    top: 0;
+                    bottom: 0;
+                    transform: skewX(-45deg) scale(0, 1);
+                }
             }
         }     
     }

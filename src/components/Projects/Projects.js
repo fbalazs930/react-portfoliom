@@ -11,9 +11,9 @@ export default function Projects() {
                         <img src={portfSrc} alt=""/>
                     </div>
                     <div className='textarea'>
-                        <h2 className='title'>Saját portfólióm</h2>
+                        <h2 className='title'>Portfólióm</h2>
                         <p className='text'>
-                            A portfóliómat a saját munkásságom bemutatása érdekében hoztam létre.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, dicta.
                         </p>
                         <div className='textarea-icons'>
                             <i className="fab fa-codepen"></i>
@@ -27,9 +27,9 @@ export default function Projects() {
                         <img src={portfSrc} alt=""/>
                     </div>
                     <div className='textarea'>
-                        <h2 className='title'>Saját portfólióm</h2>
+                        <h2 className='title'>Portfólióm</h2>
                         <p className='text'>
-                            A portfóliómat a saját munkásságom bemutatása érdekében hoztam létre.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, ducimus?                            
                         </p>
                         <div className='textarea-icons'>
                             <i className="fab fa-codepen"></i>
@@ -43,9 +43,9 @@ export default function Projects() {
                         <img src={portfSrc} alt=""/>
                     </div>
                     <div className='textarea'>
-                        <h2 className='title'>Saját portfólióm</h2>
+                        <h2 className='title'>Portfólióm</h2>
                         <p className='text'>
-                            A portfóliómat a saját munkásságom bemutatása érdekében hoztam létre.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, excepturi.
                         </p>
                         <div className='textarea-icons'>
                             <i className="fab fa-codepen"></i>
