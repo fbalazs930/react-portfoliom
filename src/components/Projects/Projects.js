@@ -5,6 +5,7 @@ export default function Projects() {
    
     return (
         <div className='projects'>
+            <h1>Munkáim</h1>
             <div className='projects-container'>
                 <div className='project'>
                     <div className='p-img'>

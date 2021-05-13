@@ -3,6 +3,8 @@ import Nav from './components/Home/Nav';
 import Home from './components/Home/Home';
 import Icons from './components/Home/Icons';
 import Projects from './components/Projects/Projects';
+import CV from './components/CV/CV';
+import About from './components/About/About';
 import Particles from 'react-particles-js';
 
 function App() {
@@ -67,6 +69,8 @@ function App() {
       <Home/>
       <Icons/>
       <Projects id='projects'/>
+      <CV/>
+      <About/>
     </div>
   );
 }

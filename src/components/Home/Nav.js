@@ -25,7 +25,9 @@ export default function Nav() {
           window.removeEventListener("scroll", getY);
         };
     });  
-        
+        const nav ={
+            background:`rgba(34, 40, 49, ${scrollY})`,
+        };
         
     //#endregion
     
@@ -39,19 +41,19 @@ export default function Nav() {
     };
 
     return (
-        <div className='nav' style={{background:`rgba(34, 40, 49, ${scrollY})`}}>
+        <div className='nav' style={nav}>
             <i onClick={scrollToTop} className="logo fab fa-wolf-pack-battalion"></i>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                <Link onClick={closeMenu} className="nav-link" to="projects" spy={true} smooth={true} offset={50} duration={500}>
+                <Link onClick={closeMenu} className="nav-link" to="projects" spy={true} smooth={true} offset={-50} duration={500}>
                     Munkáim
                 </Link>                
-                <Link onClick={closeMenu} className="nav-link" to="projects" spy={true} smooth={true} offset={50} duration={500}>
+                <Link onClick={closeMenu} className="nav-link" to="cv" spy={true} smooth={true} offset={-50} duration={500}>
                     Önéletrajz
                 </Link>
-                <Link onClick={closeMenu} className="nav-link" to="projects" spy={true} smooth={true} offset={50} duration={500}>
+                <Link onClick={closeMenu} className="nav-link" to="about" spy={true} smooth={true} offset={-50} duration={500}>
                     Rólam
                 </Link>
-                <Link onClick={closeMenu} className="nav-link" to="projects" spy={true} smooth={true} offset={50} duration={500}>
+                <Link onClick={closeMenu} className="nav-link" to="projects" spy={true} smooth={true} offset={-50} duration={500}>
                     Kapcsolat
                 </Link>            
             </ul>
