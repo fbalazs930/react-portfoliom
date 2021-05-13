@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from "react-scroll";
 
 export default function Nav() {
@@ -9,7 +9,7 @@ export default function Nav() {
     const closeMenu = () => {setClick(false)};
 
     window.addEventListener('resize',()=>{
-        setClick(false);
+        setClick(false);//majd csak ha x pixelnél nagyobb
     });
     //#endregion
     
@@ -25,9 +25,9 @@ export default function Nav() {
           window.removeEventListener("scroll", getY);
         };
     });  
-        const nav ={
-            background:`rgba(34, 40, 49, ${scrollY})`,
-        };
+    const nav ={
+        background:`rgba(10, 16, 19, ${scrollY})`,
+    };
         
     //#endregion
     
@@ -44,16 +44,16 @@ export default function Nav() {
         <div className='nav' style={nav}>
             <i onClick={scrollToTop} className="logo fab fa-wolf-pack-battalion"></i>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                <Link onClick={closeMenu} className="nav-link" to="projects" spy={true} smooth={true} offset={-50} duration={500}>
+                <Link onClick={closeMenu} className="nav-link" to="projects" spy={true} smooth={true} offset={-80} duration={500}>
                     Munkáim
                 </Link>                
-                <Link onClick={closeMenu} className="nav-link" to="cv" spy={true} smooth={true} offset={-50} duration={500}>
+                <Link onClick={closeMenu} className="nav-link" to="cv" spy={true} smooth={true} offset={-105} duration={500}>
                     Önéletrajz
                 </Link>
-                <Link onClick={closeMenu} className="nav-link" to="about" spy={true} smooth={true} offset={-50} duration={500}>
+                <Link onClick={closeMenu} className="nav-link" to="about" spy={true} smooth={true} offset={10} duration={500}>
                     Rólam
                 </Link>
-                <Link onClick={closeMenu} className="nav-link" to="projects" spy={true} smooth={true} offset={-50} duration={500}>
+                <Link onClick={closeMenu} className="nav-link" to="projects" spy={true} smooth={true} offset={-100} duration={500}>
                     Kapcsolat
                 </Link>            
             </ul>
