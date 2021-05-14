@@ -5,6 +5,7 @@ import Icons from './components/Home/Icons';
 import Projects from './components/Projects/Projects';
 import CV from './components/CV/CV';
 import About from './components/About/About';
+import Contact from './components/Contact/Contact';
 import Particles from 'react-particles-js';
 
 function App() {
@@ -71,6 +72,7 @@ function App() {
       <Projects id='projects'/>
       <CV/>
       <About/>
+      <Contact/>
     </div>
   );
 }

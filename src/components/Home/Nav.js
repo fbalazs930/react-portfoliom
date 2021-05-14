@@ -16,7 +16,7 @@ export default function Nav() {
     //#region NavBg
     const [scrollY, setScrollY] = useState(0);
     function getY() {
-        setScrollY(window.pageYOffset / 650);
+        setScrollY(window.pageYOffset);
     }
     
     useEffect(() => {
@@ -26,10 +26,12 @@ export default function Nav() {
         };
     });  
     const nav ={
-        background:`rgba(10, 16, 19, ${scrollY})`,
+        background:`rgba(23, 37, 42, ${scrollY / 600})`,
     };
         
     //#endregion
+    
+    
     
 
     
@@ -47,19 +49,20 @@ export default function Nav() {
                 <Link onClick={closeMenu} className="nav-link" to="projects" spy={true} smooth={true} offset={-80} duration={500}>
                     Munkáim
                 </Link>                
-                <Link onClick={closeMenu} className="nav-link" to="cv" spy={true} smooth={true} offset={-105} duration={500}>
+                <Link onClick={closeMenu} className="nav-link" to="cv" spy={true} smooth={true} offset={-100} duration={500}>
                     Önéletrajz
                 </Link>
-                <Link onClick={closeMenu} className="nav-link" to="about" spy={true} smooth={true} offset={10} duration={500}>
+                <Link onClick={closeMenu} className="nav-link" to="about" spy={true} smooth={true} offset={-90} duration={500}>
                     Rólam
                 </Link>
-                <Link onClick={closeMenu} className="nav-link" to="projects" spy={true} smooth={true} offset={-100} duration={500}>
+                <Link onClick={closeMenu} className="nav-link" to="contact" spy={true} smooth={true} offset={0} duration={500}>
                     Kapcsolat
                 </Link>            
             </ul>
             <div className="menu-icon" onClick={handleClick}>
                 <i className={click ? 'fas fa-times' : 'fas fa-bars'}/>
             </div>
+            
         </div>
     )
 }
