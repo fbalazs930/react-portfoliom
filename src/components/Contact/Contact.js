@@ -24,7 +24,7 @@ export default function Contact() {
             <form onSubmit={sendEmail}>
                 <input className='name' type="text" placeholder="Név" name="name"/>
                 <input className='email' type="email" placeholder="E-mail cím" name="email"/>
-                <input type="text" placeholder="Subject" name="subject"/>
+                <input type="text" placeholder="Tárgy" name="subject"/>
                 <textarea className='message' placeholder="Írj valamit..." name="message"></textarea>
                 <button className='send' type="submit">Küldés</button>
             </form>
