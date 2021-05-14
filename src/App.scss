@@ -500,6 +500,7 @@ $light: #feffff;
                             grid-template-columns: 1fr 1fr;
                             grid-template-rows: 1fr 1fr;
                             gap:2rem;
+                            padding:2rem 4rem 0 4rem;
                         }
                         .lang{
                             display: flex;
@@ -536,11 +537,12 @@ $light: #feffff;
                 width: 80%;
                 height:5vh;
                 border-radius: 5px; 
-                outline:none;               
-                border:1px solid $between;
+                outline:none;    
+                border:none;          
+                box-shadow: 0 0 0 1px $between;
                 padding:.5rem;
                 &:focus{
-                    outline:1px solid $between;
+                    box-shadow: 0 0 0 2px $between;
                 }
             }
             textarea{

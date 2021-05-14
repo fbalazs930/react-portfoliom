@@ -761,6 +761,7 @@
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     gap: 2rem;
+    padding: 2rem 4rem 0 4rem;
   }
 }
 
@@ -830,12 +831,15 @@
   height: 5vh;
   border-radius: 5px;
   outline: none;
-  border: 1px solid #2b7a78;
+  border: none;
+  -webkit-box-shadow: 0 0 0 1px #2b7a78;
+          box-shadow: 0 0 0 1px #2b7a78;
   padding: .5rem;
 }
 
 .App .contact form input:focus, .App .contact form textarea:focus {
-  outline: 1px solid #2b7a78;
+  -webkit-box-shadow: 0 0 0 2px #2b7a78;
+          box-shadow: 0 0 0 2px #2b7a78;
 }
 
 .App .contact form textarea {
