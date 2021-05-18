@@ -69,7 +69,7 @@ function App() {
       <Nav/>
       <Home/>
       <Icons/>
-      <Projects id='projects'/>
+      <Projects/>
       <CV/>
       <About/>
       <Contact/>

@@ -1,5 +1,7 @@
 import React from 'react';
 import portfSrc from './Images/portf.jpg'
+import weatherappSrc from './Images/weatherapp.png'
+
 
 export default function Projects() {
    
@@ -10,22 +12,24 @@ export default function Projects() {
                 <div className='project'>
                     <div className="top">
                         <div className='p-img'>
-                            <img src={portfSrc} alt=""/>
+                            <img src={weatherappSrc} alt=""/>
                         </div>
                         
                         <div className='textarea'>
-                            <h2 className='title'>Portfólióm</h2>
+                            <h2 className='title'>Időjárás</h2>
                             <p className='text'>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia dolorum nam, tenetur officiis a totam! Velit veniam veritatis ipsam repellat.
+                                A weboldal megmutajta bármelyik város jelenlegi hőmérsékletét egy ingyenes API (OpenWeatherMap) használatával. 
                             </p>
                             <div className="built-in">
                                 <p>Készült: </p>
-                                <i className="fab fa-react"></i>
+                                <i className="fab fa-html5"></i>
+                                <i className="fab fa-css3-alt"></i>
+                                <i className="fab fa-js"></i>
                             </div>
                             <div className='textarea-icons'>
-                                <i className="fab fa-codepen"></i>
-                                <i className="fab fa-github"></i>
-                                <i className="fas fa-external-link-alt"></i>
+                                <a target='_blank' href="https://codepen.io/fbalazs930/full/eYvmrjw"><i className="fab fa-codepen"></i></a>
+                                <a target='_blank' href="https://github.com/fbalazs930/weatherappapi"><i className="fab fa-github"></i></a>  
+                                <a target='_blank' href="https://idojaras-api.netlify.app/"><i className="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                     </div>

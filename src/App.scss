@@ -4,11 +4,14 @@ $between: #2b7a78;
 $light: #feffff;
 #iconLight{color:$light}
 #iconDark{color:#0a1013}
+#show{i{opacity:1;transition: all .2s ease-in-out;}}
+#hide{i{opacity:0;transition: all .2s ease-in-out;}}
+strong{font-weight: 530}
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 :root{
     scrollbar-color: #c8c8c8 #313131 !important;
@@ -28,7 +31,6 @@ $light: #feffff;
         background: #eeeeee; 
     }
 }
-   
 .App{    
     .bg{
         width: 100vw;
@@ -50,6 +52,7 @@ $light: #feffff;
     }
     min-height: 100vh;
     color:$dark;    
+
     .nav{
         transition: all .3s ease;
         height: 11vh;
@@ -186,8 +189,9 @@ $light: #feffff;
             }
         }     
     }
+    
     .icons{
-        font-size: 25px;
+        font-size: 1.5rem;
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -195,8 +199,12 @@ $light: #feffff;
         position: fixed;
         left:10px;
         bottom:10px;
+        z-index: 3;
         i{
             cursor: pointer;
+        }
+        @media only screen and (max-width:940px){
+            display: none;
         }
     }
     .projects{
@@ -263,17 +271,25 @@ $light: #feffff;
                                 width:100%;
                             }
                         }
+                        .title{
+                            font-size: 1.7rem;
+                            color:$between;
+                        }
                         .text{
                             width: 90%;   
                             padding:1rem 0;
+                            line-height: 25px;
                         }
                         .built-in{
+                            p{                                
+                                color:$between;
+                            }
                             display: flex;
                             align-items: center;
                             gap:1rem; 
                             padding:1rem 0;
                             font-weight: bold;
-                            font-size: 1.3rem;
+                            font-size: 1.5rem;
                         }
                         .textarea-icons{
                             display:flex;
@@ -282,7 +298,9 @@ $light: #feffff;
                             align-items: center;
                             gap:1rem;
                             font-size: 1.6rem;
-                            color:$dark;
+                            a{
+                                color:$dark;
+                            }
                             i{
                                 cursor: pointer;
                             }
@@ -414,6 +432,7 @@ $light: #feffff;
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                margin:2rem 0 0 0;
                 svg{
                     object-fit:contain;
                     width:100%;
@@ -471,7 +490,7 @@ $light: #feffff;
                     justify-content: center;
                     align-items:center;
                     flex-direction: column;
-                    line-height: 25px;
+                    line-height: 27px;
                     p{
                         margin:1rem 0;
                         padding: 0 .3rem;
@@ -485,6 +504,7 @@ $light: #feffff;
                     h2{
                         padding:0 1rem 1.5rem 1rem;
                         text-align: center;
+                        color:$between;
                     }
                     ul{
                         display: flex;
@@ -581,6 +601,19 @@ $light: #feffff;
                     bottom: 0;
                     transform: skewX(-45deg) scale(0, 1);
                 }
+            }
+        }
+        position: relative;
+        .c-icons{
+            a{
+                color:$dark;
+            }
+            position: absolute;
+            bottom:10px;
+            left:10px;
+            display: none;
+            @media only screen and (max-width:940px){
+                display:flex;
             }
         }
     }

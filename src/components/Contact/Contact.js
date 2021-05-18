@@ -28,6 +28,20 @@ export default function Contact() {
                 <textarea className='message' placeholder="Írj valamit..." name="message"></textarea>
                 <button className='send' type="submit">Küldés</button>
             </form>
+            <div className='icons c-icons'>
+                <a target='_blank' href="https://www.linkedin.com/in/farkas-bal%C3%A1zs-3321a5204/" rel="noreferrer">
+                    <i  className="fab fa-linkedin-in"></i>
+                </a>
+                <a target='_blank' href="https://www.facebook.com/fbalazs930/" rel="noreferrer">
+                    <i  className="fab fa-facebook-f"></i>
+                </a>            
+                <a target='_blank' href="mailto:fbalazs930@gmail.com" rel="noreferrer">
+                    <i  className="fas fa-envelope"></i>
+                </a>
+                <a target='_blank' href="tel:06203370852" rel="noreferrer">
+                    <i  className="fas fa-phone-alt"></i>
+                </a>
+            </div>
         </div>
     )
 }

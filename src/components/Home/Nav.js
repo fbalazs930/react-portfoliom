@@ -9,7 +9,9 @@ export default function Nav() {
     const closeMenu = () => {setClick(false)};
 
     window.addEventListener('resize',()=>{
-        setClick(false);//majd csak ha x pixelnél nagyobb
+        setClick(false);
+        if(window.innerWidth<768){
+        }
     });
     //#endregion
     
@@ -25,7 +27,7 @@ export default function Nav() {
           window.removeEventListener("scroll", getY);
         };
     });  
-    const nav ={
+    const nav = {
         background:`rgba(23, 37, 42, ${scrollY / 600})`,
     };
         
