@@ -29,6 +29,7 @@ export default function Nav() {
     });  
     const nav = {
         background:`rgba(23, 37, 42, ${scrollY / 600})`,
+        boxShadow: `0 3px 6px -2px rgba(20, 20, 20, ${scrollY / 600})`
     };
         
     //#endregion

@@ -1,24 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 export default function Icons() {
     const[color,setColor] = useState(true);
 
     window.addEventListener('scroll', () => {
-        if(window.scrollY>=50){
+        if(window.scrollY>=50 && window.innerWidth>=940){
             setColor(false);
         }
         else{
             setColor(true);
         }        
-    });
-
-
-    
- 
-
-    
-    
-
+    });  
     return (
         <div className='icons'>
             <a target='_blank' href="https://www.linkedin.com/in/farkas-bal%C3%A1zs-3321a5204/" rel="noreferrer">

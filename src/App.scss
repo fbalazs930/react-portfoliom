@@ -1,11 +1,9 @@
-$titleSize : clamp(1.7rem, 6vw, 2.3rem);
+$titleSize : clamp(1.9rem, 6vw, 2.5rem);
 $dark: #17252a;
 $between: #2b7a78;
 $light: #feffff;
 #iconLight{color:$light}
 #iconDark{color:#0a1013}
-#show{i{opacity:1;transition: all .2s ease-in-out;}}
-#hide{i{opacity:0;transition: all .2s ease-in-out;}}
 strong{font-weight: 530}
 *{
     padding: 0;
@@ -141,7 +139,7 @@ strong{font-weight: 530}
         }
     }
     .home{
-        min-height: 90vh;
+        min-height: 89vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -149,10 +147,10 @@ strong{font-weight: 530}
         .home-content{
             padding: 0 0 20vh 0;
             h1{
-                font-size: clamp(2.5rem, 8vw, 3.5rem);
+                font-size: clamp(2rem, 7vw, 3.5rem);
             }
             h3{
-                font-size: $titleSize;
+                font-size: clamp(1.3rem, 6vw, 2.3rem);
                 margin:.5rem 0 1.5rem 0;
             }
             .home-btn button {
@@ -197,14 +195,14 @@ strong{font-weight: 530}
         justify-content: flex-start;
         gap:15px;
         position: fixed;
-        left:10px;
-        bottom:10px;
+        left:13px;
+        bottom:7px;
         z-index: 3;
         i{
             cursor: pointer;
         }
         @media only screen and (max-width:940px){
-            display: none;
+            position: absolute;
         }
     }
     .projects{
@@ -289,7 +287,7 @@ strong{font-weight: 530}
                             gap:1rem; 
                             padding:1rem 0;
                             font-weight: bold;
-                            font-size: 1.5rem;
+                            font-size: 1.2rem;
                         }
                         .textarea-icons{
                             display:flex;
@@ -417,8 +415,8 @@ strong{font-weight: 530}
                             padding: 1rem 1.5rem;
                             display: block;
                             transition: all 0.3s ease;
-                            left: -20%;
-                            right: -20%;
+                            left: -25%;
+                            right: -25%;
                             top: 0;
                             bottom: 0;
                             transform: skewX(-45deg) scale(0, 1);
@@ -595,8 +593,8 @@ strong{font-weight: 530}
                     padding: 1rem 1.5rem;
                     display: block;
                     transition: all 0.3s ease;
-                    left: -20%;
-                    right: -20%;
+                    left: -30%;
+                    right: -30%;
                     top: 0;
                     bottom: 0;
                     transform: skewX(-45deg) scale(0, 1);
@@ -609,8 +607,8 @@ strong{font-weight: 530}
                 color:$dark;
             }
             position: absolute;
-            bottom:10px;
-            left:10px;
+            bottom:7px;
+            left:13px;
             display: none;
             @media only screen and (max-width:940px){
                 display:flex;

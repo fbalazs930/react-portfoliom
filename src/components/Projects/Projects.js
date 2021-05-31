@@ -22,9 +22,9 @@ export default function Projects() {
                             </p>
                             <div className="built-in">
                                 <p>Készült: </p>
-                                <i className="fab fa-html5"></i>
-                                <i className="fab fa-css3-alt"></i>
-                                <i className="fab fa-js"></i>
+                                <i className="fab fa-html5" title="HTML"></i>
+                                <i className="fab fa-css3-alt" title="CSS"></i>
+                                <i className="fab fa-js" title="JavaScript"></i>
                             </div>
                             <div className='textarea-icons'>
                                 <a target='_blank' href="https://codepen.io/fbalazs930/full/eYvmrjw"><i className="fab fa-codepen"></i></a>
@@ -50,7 +50,7 @@ export default function Projects() {
                             </p>
                             <div className="built-in">
                                 <p>Készült: </p>
-                                <i className="fab fa-react"></i>
+                                <i className="fab fa-react" title="React"></i>
                             </div>
                             <div className='textarea-icons'>
                                 <i className="fab fa-codepen"></i>
@@ -76,7 +76,7 @@ export default function Projects() {
                             </p>
                             <div className="built-in">
                                 <p>Készült: </p>
-                                <i className="fab fa-react"></i>
+                                <i className="fab fa-react" title="React"></i>
                             </div>
                             <div className='textarea-icons'>
                                 <i className="fab fa-codepen"></i>
