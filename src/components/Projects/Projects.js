@@ -1,6 +1,4 @@
 import React from 'react';
-import portfSrc from './Images/portf.jpg'
-import weatherappSrc from './Images/weatherapp.png'
 
 
 export default function Projects() {
@@ -12,9 +10,8 @@ export default function Projects() {
                 <div className='project'>
                     <div className="top">
                         <div className='p-img'>
-                            <img src={weatherappSrc} alt=""/>
-                        </div>
-                        
+                            <img src='https://i.postimg.cc/dVyHLyTL/weatherapp.png' alt=""/>
+                        </div>                        
                         <div className='textarea'>
                             <h2 className='title'>Időjárás</h2>
                             <p className='text'>
@@ -40,13 +37,12 @@ export default function Projects() {
                 <div className='project'>
                     <div className="top">
                         <div className='p-img'>
-                            <img src={portfSrc} alt=""/>
-                        </div>
-                        
+                            <img src='https://i.postimg.cc/pXqCrBTW/messenger.png' alt=""/>
+                        </div>                        
                         <div className='textarea'>
-                            <h2 className='title'>Portfólióm</h2>
+                            <h2 className='title'>Messenger App</h2>
                             <p className='text'>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque iste eveniet voluptate! Quaerat porro provident voluptates ducimus, soluta reiciendis non?                          
+                                Facebook Messegnerhez hasonló üzenetküldő App. Firebase adatbázissal készült, amely lehetővé teszi az üzenetek megőrzését.                    
                             </p>
                             <div className="built-in">
                                 <p>Készült: </p>
@@ -66,13 +62,13 @@ export default function Projects() {
                 <div className='project'>
                     <div className="top">
                         <div className='p-img'>
-                            <img src={portfSrc} alt=""/>
+                            <img src='https://i.postimg.cc/4yCfztxn/guitar-shop.png' alt=""/>
                         </div>
                         
                         <div className='textarea'>
-                            <h2 className='title'>Portfólióm</h2>
+                            <h2 className='title'>Gitár Shop</h2>
                             <p className='text'>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem aliquid suscipit explicabo vero. Deleniti, laudantium. Suscipit expedita nihil minus officiis.                          
+                                Egy létező gitár cég weboldalának másolata. React Router és Props felhasználásával.     
                             </p>
                             <div className="built-in">
                                 <p>Készült: </p>
@@ -85,8 +81,7 @@ export default function Projects() {
                             </div>
                         </div>
                     </div>
-                </div>
-                
+                </div>                
             </div>
         </div>
     )
