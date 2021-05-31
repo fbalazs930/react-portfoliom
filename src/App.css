@@ -299,7 +299,7 @@ strong {
 
 @media only screen and (max-width: 940px) {
   .App .icons {
-    position: absolute;
+    display: none;
   }
 }
 
@@ -828,6 +828,12 @@ strong {
   position: relative;
 }
 
+@media only screen and (max-width: 940px) {
+  .App .contact {
+    padding: 5rem 0 0 0;
+  }
+}
+
 .App .contact form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -916,9 +922,9 @@ strong {
 }
 
 .App .contact .c-icons {
-  position: absolute;
-  bottom: 7px;
-  left: 13px;
+  position: static;
+  margin: 0 auto 0 0;
+  padding: 0 0 0 10px;
   display: none;
 }
 
