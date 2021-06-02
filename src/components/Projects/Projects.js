@@ -7,6 +7,52 @@ export default function Projects() {
         <div className='projects'>
             <h1>Munkáim</h1>
             <div className='projects-container'>
+            <div className='project'>
+                    <div className="top">
+                        <div className='p-img'>
+                            <img src='https://i.postimg.cc/4yCfztxn/guitar-shop.png' alt=""/>
+                        </div>
+                        
+                        <div className='textarea'>
+                            <h2 className='title'>Gitár Shop</h2>
+                            <p className='text'>
+                                Egy létező gitár cég weboldalának másolata.    
+                            </p>
+                            <div className="built-in">
+                                <p>Készült: </p>
+                                <i className="fab fa-react" title="React"></i>
+                            </div>
+                            <div className='textarea-icons'>
+                                <a target='_blank' href="https://github.com/fbalazs930/guitar-shop"><i className="fab fa-github"></i></a>  
+                                <a target='_blank' href="https://jackson-clone.netlify.app/"><i className="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div className='project'>
+                    <div className="top">
+                        <div className='p-img'>
+                            <img src='https://i.postimg.cc/pXqCrBTW/messenger.png' alt=""/>
+                        </div>                        
+                        <div className='textarea'>
+                            <h2 className='title'>Messenger App</h2>
+                            <p className='text'>
+                                Facebook Messegnerhez hasonló üzenetküldő App. Firebase adatbázissal készült, amely lehetővé teszi az üzenetek megőrzését.                    
+                            </p>
+                            <div className="built-in">
+                                <p>Készült: </p>
+                                <i className="fab fa-react" title="React"></i>
+                            </div>
+                            <div className='textarea-icons'>
+                                <a target='_blank' href="https://github.com/fbalazs930/guitar-shop"><i className="fab fa-github"></i></a>  
+                                <a target='_blank' href="https://jackson-clone.netlify.app/"><i className="fas fa-external-link-alt"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="bottom">
+                        <div className="line-hor"></div>
+                    </div>
+                </div>
                 <div className='project'>
                     <div className="top">
                         <div className='p-img'>
@@ -24,7 +70,6 @@ export default function Projects() {
                                 <i className="fab fa-js" title="JavaScript"></i>
                             </div>
                             <div className='textarea-icons'>
-                                <a target='_blank' href="https://codepen.io/fbalazs930/full/eYvmrjw"><i className="fab fa-codepen"></i></a>
                                 <a target='_blank' href="https://github.com/fbalazs930/weatherappapi"><i className="fab fa-github"></i></a>  
                                 <a target='_blank' href="https://idojaras-api.netlify.app/"><i className="fas fa-external-link-alt"></i></a>
                             </div>
@@ -33,55 +78,7 @@ export default function Projects() {
                     <div className="bottom">
                         <div className="line-hor"></div>
                     </div>
-                </div>
-                <div className='project'>
-                    <div className="top">
-                        <div className='p-img'>
-                            <img src='https://i.postimg.cc/pXqCrBTW/messenger.png' alt=""/>
-                        </div>                        
-                        <div className='textarea'>
-                            <h2 className='title'>Messenger App</h2>
-                            <p className='text'>
-                                Facebook Messegnerhez hasonló üzenetküldő App. Firebase adatbázissal készült, amely lehetővé teszi az üzenetek megőrzését.                    
-                            </p>
-                            <div className="built-in">
-                                <p>Készült: </p>
-                                <i className="fab fa-react" title="React"></i>
-                            </div>
-                            <div className='textarea-icons'>
-                                <i className="fab fa-codepen"></i>
-                                <i className="fab fa-github"></i>
-                                <i className="fas fa-external-link-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="bottom">
-                        <div className="line-hor"></div>
-                    </div>
-                </div>
-                <div className='project'>
-                    <div className="top">
-                        <div className='p-img'>
-                            <img src='https://i.postimg.cc/4yCfztxn/guitar-shop.png' alt=""/>
-                        </div>
-                        
-                        <div className='textarea'>
-                            <h2 className='title'>Gitár Shop</h2>
-                            <p className='text'>
-                                Egy létező gitár cég weboldalának másolata. React Router és Props felhasználásával.     
-                            </p>
-                            <div className="built-in">
-                                <p>Készült: </p>
-                                <i className="fab fa-react" title="React"></i>
-                            </div>
-                            <div className='textarea-icons'>
-                                <i className="fab fa-codepen"></i>
-                                <i className="fab fa-github"></i>
-                                <i className="fas fa-external-link-alt"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>                
+                </div>                               
             </div>
         </div>
     )

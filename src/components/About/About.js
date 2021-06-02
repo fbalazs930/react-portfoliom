@@ -12,10 +12,9 @@ export default function About() {
                     </div>
 
                     <div className="text">
-                        <p> <strong>Farkas Balázs</strong> vagyok. Szenvedélyem a <strong>weboldalkészítés</strong> és a <strong>programozás.</strong> A szakmával <strong>2018</strong>-ban kezdtem el komolyabban foglalkozni a középiskolában.                                    
+                        <p>
+                        A <strong>webfejlesztéssel 2018</strong> -ban kezdtem el komolyabban foglalkozni a középiskolában. Tudásomat <strong>főként</strong> az internet segítségével <strong>autodidakta</strong> módon szereztem meg, amit napról napra igyekszek fejleszteni. Jelenleg IT munkatapasztalattal még nem rendelkezem
                         </p>
-                        <p>Jelenleg IT munkatapsztalattal még nem rendelkezem, de remélhetőleg ez hamarosan meg fog változni. Tudásomat <strong>főként</strong> az internet segítségével <strong>autodidakta</strong> módon szereztem meg, amit napról napra igyekszek fejleszteni.
-                        </p>       
                     </div>   
                 </div>
                         
