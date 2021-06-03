@@ -13,7 +13,7 @@ export default function About() {
 
                     <div className="text">
                         <p>
-                        A <strong>webfejlesztéssel 2018</strong> -ban kezdtem el komolyabban foglalkozni a középiskolában. Tudásomat <strong>főként</strong> az internet segítségével <strong>autodidakta</strong> módon szereztem meg, amit napról napra igyekszek fejleszteni. Jelenleg IT munkatapasztalattal még nem rendelkezem
+                        A <strong>webfejlesztéssel 2018</strong>-ban kezdtem el komolyabban foglalkozni a középiskolában. Tudásomat <strong>főként</strong> az internet segítségével <strong>autodidakta</strong> módon szereztem meg, amit napról napra igyekszek fejleszteni. Jelenleg IT munkatapasztalattal még nem rendelkezem
                         </p>
                     </div>   
                 </div>

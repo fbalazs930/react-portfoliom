@@ -16,7 +16,7 @@ export default function Projects() {
                         <div className='textarea'>
                             <h2 className='title'>Gitár Shop</h2>
                             <p className='text'>
-                                Egy létező gitár cég weboldalának másolata.    
+                                Egy létező gitárgyártó cég weboldalának másolata.   
                             </p>
                             <div className="built-in">
                                 <p>Készült: </p>
@@ -27,6 +27,9 @@ export default function Projects() {
                                 <a target='_blank' href="https://jackson-clone.netlify.app/"><i className="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
+                    </div>                    
+                    <div className="bottom">
+                        <div className="line-hor"></div>
                     </div>
                 </div> 
                 <div className='project'>
@@ -44,8 +47,8 @@ export default function Projects() {
                                 <i className="fab fa-react" title="React"></i>
                             </div>
                             <div className='textarea-icons'>
-                                <a target='_blank' href="https://github.com/fbalazs930/guitar-shop"><i className="fab fa-github"></i></a>  
-                                <a target='_blank' href="https://jackson-clone.netlify.app/"><i className="fas fa-external-link-alt"></i></a>
+                                <a target='_blank' href="https://github.com/fbalazs930/messenger-app"><i className="fab fa-github"></i></a>  
+                                <a target='_blank' href="https://messenger-react.netlify.app/"><i className="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
                     </div>
@@ -74,9 +77,6 @@ export default function Projects() {
                                 <a target='_blank' href="https://idojaras-api.netlify.app/"><i className="fas fa-external-link-alt"></i></a>
                             </div>
                         </div>
-                    </div>
-                    <div className="bottom">
-                        <div className="line-hor"></div>
                     </div>
                 </div>                               
             </div>

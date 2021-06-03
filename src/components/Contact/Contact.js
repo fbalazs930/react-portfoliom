@@ -32,6 +32,9 @@ export default function Contact() {
                 <a target='_blank' href="https://www.linkedin.com/in/farkas-bal%C3%A1zs-3321a5204/" rel="noreferrer">
                     <i  className="fab fa-linkedin-in"></i>
                 </a>
+                <a target='_blank' href="https://github.com/fbalazs930">
+                    <i className="fab fa-github"></i>
+                </a>  
                 <a target='_blank' href="https://www.facebook.com/fbalazs930/" rel="noreferrer">
                     <i  className="fab fa-facebook-f"></i>
                 </a>            

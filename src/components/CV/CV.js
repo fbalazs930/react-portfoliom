@@ -8,7 +8,7 @@ export default function CV() {
                 <div className="text">
                     <div>
                         <h3>Az önéletrajzom a gombra kattintva tekinthető meg.</h3>
-                        <a rel="noreferrer" target='_blank' href="https://drive.google.com/file/d/1wSZuhLDVghUNI6XhfRPjzxQF87v1Z8Yr/view">
+                        <a rel="noreferrer" target='_blank' href="https://drive.google.com/file/d/1VQ1anT8qZhukNm1KLMaQpQcJmEHtOqnt/view?usp=sharing">
                             <button>Megnyit</button>
                         </a>
                     </div>
