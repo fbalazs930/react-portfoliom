@@ -15,7 +15,7 @@ strong {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 :root {
@@ -65,8 +65,8 @@ strong {
 }
 
 .App .nav {
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   height: 11vh;
   display: -ms-grid;
   display: grid;
@@ -134,13 +134,13 @@ strong {
       -ms-flex-align: center;
           align-items: center;
   font-size: clamp(1rem, 2vw, 1.1rem);
-  -webkit-transition: border-bottom .1s ease-in-out;
-  transition: border-bottom .1s ease-in-out;
+  -webkit-transition: border-bottom 0.1s ease-in-out;
+  transition: border-bottom 0.1s ease-in-out;
 }
 
 .App .nav .nav-menu .nav-link:hover {
-  -webkit-transition: border-bottom .1s ease-in-out;
-  transition: border-bottom .1s ease-in-out;
+  -webkit-transition: border-bottom 0.1s ease-in-out;
+  transition: border-bottom 0.1s ease-in-out;
   border-bottom: 3px solid #eee;
 }
 
@@ -162,8 +162,8 @@ strong {
     padding: 100px 0;
     left: -1000px;
     background-color: #17252a;
-    -webkit-transition: all .2s ease-in-out;
-    transition: all .2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
   }
   .App .nav .nav-menu .nav-link {
     display: -webkit-box;
@@ -182,8 +182,8 @@ strong {
 .App .nav .active {
   opacity: 1;
   left: 0;
-  -webkit-transition: left .2s ease-in-out;
-  transition: left .2s ease-in-out;
+  -webkit-transition: left 0.2s ease-in-out;
+  transition: left 0.2s ease-in-out;
 }
 
 .App .nav .menu-icon {
@@ -232,7 +232,7 @@ strong {
 
 .App .home .home-content h3 {
   font-size: clamp(1.3rem, 6vw, 2.3rem);
-  margin: .5rem 0 1.5rem 0;
+  margin: 0.5rem 0 1.5rem 0;
 }
 
 .App .home .home-content .home-btn button {
@@ -241,7 +241,7 @@ strong {
   background: #2b7a78;
   color: #fff;
   border: 2px solid #2b7a78;
-  padding: .8rem 1.3rem;
+  padding: 0.8rem 1.3rem;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -596,7 +596,7 @@ strong {
   background: #2b7a78;
   color: #fff;
   border: 2px solid #2b7a78;
-  padding: .8rem 1.3rem;
+  padding: 0.8rem 1.3rem;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -749,7 +749,7 @@ strong {
 
 .App .about .about-container .top .text p {
   margin: 1rem 0;
-  padding: 0 .3rem;
+  padding: 0 0.3rem;
   font-size: clamp(1.1rem, 1vw, 2rem);
 }
 
@@ -805,7 +805,7 @@ strong {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .App .contact {
@@ -859,7 +859,8 @@ strong {
   }
 }
 
-.App .contact form input, .App .contact form textarea {
+.App .contact form input,
+.App .contact form textarea {
   width: 80%;
   height: 5vh;
   border-radius: 5px;
@@ -867,10 +868,11 @@ strong {
   border: none;
   -webkit-box-shadow: 0 0 0 1px #2b7a78;
           box-shadow: 0 0 0 1px #2b7a78;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 
-.App .contact form input:focus, .App .contact form textarea:focus {
+.App .contact form input:focus,
+.App .contact form textarea:focus {
   -webkit-box-shadow: 0 0 0 2px #2b7a78;
           box-shadow: 0 0 0 2px #2b7a78;
 }
@@ -887,7 +889,7 @@ strong {
   background: #2b7a78;
   color: #fff;
   border: 2px solid #2b7a78;
-  padding: .8rem 1.3rem;
+  padding: 0.8rem 1.3rem;
   position: relative;
   z-index: 1;
   overflow: hidden;
