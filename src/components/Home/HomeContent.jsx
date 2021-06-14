@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function HomeContent() {
+const HomeContent = () => {
     return (
         <div className='home-content'>
             <h1>Farkas Balázs</h1>
@@ -8,3 +8,5 @@ export default function HomeContent() {
         </div>
     )
 }
+
+export default HomeContent;

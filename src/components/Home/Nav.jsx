@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from "react-scroll";
 
-export default function Nav() {
+const Nav = () => {
     //#region Menu
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
@@ -61,3 +61,5 @@ export default function Nav() {
         </div>
     )
 }
+
+export default Nav;

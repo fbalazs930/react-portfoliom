@@ -1,15 +1,14 @@
-import './App.css';
-import Nav from './components/Home/Nav';
-import Home from './components/Home/Home';
-import Icons from './components/Home/Icons';
-import Projects from './components/Projects/Projects';
-import CV from './components/CV/CV';
-import About from './components/About/About';
-import Contact from './components/Contact/Contact';
+import './SCSS/Main.css';
+import Nav from './components/Home/Nav.jsx';
+import Home from './components/Home/Home.jsx';
+import Icons from './components/Home/Icons.jsx';
+import Projects from './components/Projects/Projects.jsx';
+import CV from './components/CV/CV.jsx';
+import About from './components/About/About.jsx';
+import Contact from './components/Contact/Contact.jsx';
 import Particles from 'react-particles-js';
 
 function App() {
-
     return (
         <div className='App'>
             <div className="bg2"></div>

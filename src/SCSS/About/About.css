@@ -1,0 +1,74 @@
+.about {
+  min-height: 90vh;
+  background: #2222229b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about .about-container {
+  overflow-x: hidden;
+  min-height: 40vh;
+  width: 70vw;
+}
+
+.about .about-container .desc {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about .about-container .desc .text {
+  padding: 1rem 0;
+}
+
+.about .about-container .desc .text p {
+  padding: 1rem 0;
+}
+
+.about .about-container .desc .langs p {
+  padding: 0 0 1rem 0;
+}
+
+.about .about-container .desc .langs ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2rem;
+}
+
+@media only screen and (max-width: 520px) {
+  .about .about-container .desc .langs ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+/*# sourceMappingURL=About.css.map */

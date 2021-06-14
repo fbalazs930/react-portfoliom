@@ -1,8 +1,6 @@
 import React from 'react';
 
-
-export default function Projects() {
-
+const Projects = () => {
     return (
         <div className='projects'>
             <h1>Munkáim</h1>
@@ -12,7 +10,6 @@ export default function Projects() {
                         <div className='p-img'>
                             <img src='https://i.postimg.cc/4yCfztxn/guitar-shop.png' alt="" />
                         </div>
-
                         <div className='textarea'>
                             <h2 className='title'>Gitár Shop</h2>
                             <p className='text'>
@@ -27,7 +24,7 @@ export default function Projects() {
                                     <i className="fab fa-github">
                                     </i>
                                 </a>
-                                <a target='_blank' href="https://jackson-clone.netlify.app/" rel='noreferrer'>
+                                <a target='_blank' href="https://guitar-shop.pages.dev/" rel='noreferrer'>
                                     <i className="fas fa-external-link-alt">
                                     </i>
                                 </a>
@@ -101,3 +98,5 @@ export default function Projects() {
         </div>
     )
 }
+
+export default Projects;

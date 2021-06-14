@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from "react-scroll";
 
-export default function Home() {
+const Home = () => {
     return (
         <div className='home'>
             <div className='home-content'>
@@ -14,3 +14,5 @@ export default function Home() {
         </div>
     )
 }
+
+export default Home;

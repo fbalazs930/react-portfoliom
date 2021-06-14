@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function About() {
+const About = () => {
     return (
         <div className='about'>
             <h1>Bemutatkozás</h1>
@@ -44,3 +44,5 @@ export default function About() {
         </div>
     )
 }
+
+export default About;

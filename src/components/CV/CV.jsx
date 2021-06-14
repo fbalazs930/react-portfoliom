@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function CV() {
+const CV = () => {
     return (
         <div className='cv'>
             <h1>Önéletrajz</h1>
@@ -57,3 +57,5 @@ export default function CV() {
         </div>
     )
 }
+
+export default CV;

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 
-export default function Icons() {
+const Icons = () => {
     const [color, setColor] = useState(true);
-
     window.addEventListener('scroll', () => {
         if (window.scrollY >= 50 && window.innerWidth >= 940) {
             setColor(false);
@@ -31,3 +30,5 @@ export default function Icons() {
         </div>
     )
 }
+
+export default Icons;

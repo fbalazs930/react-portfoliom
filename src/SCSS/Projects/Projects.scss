@@ -1,0 +1,137 @@
+.projects {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $light;
+    h1 {
+        font-size: $titleSize;
+        margin: 5rem 0;
+    }
+    .projects-container {
+        background-color: $light;
+        min-height: 70vh;
+        width: calc(70vw + 3.5rem);
+        overflow-x: hidden;
+        .project {
+            display: grid;
+            grid-template-rows: 1fr 10vh;
+            grid-template-areas:
+                "pTop"
+                "pBottom";
+            .top {
+                grid-area: pTop;
+                display: grid;
+                grid-template-columns: 1fr 1.2fr;
+                grid-template-areas: "pImg text";
+                @media screen and (max-width: 940px) {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr auto;
+                    grid-template-areas:
+                        "text"
+                        "pImg";
+                    .text {
+                        text-align: justify;
+                    }
+                }
+                .p-img {
+                    grid-area: pImg;
+                    img {
+                        object-fit: contain;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                .textarea {
+                    grid-area: text;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 1rem 0;
+                    margin: 0 0 0 5rem;
+                    @media screen and (max-width: 940px) {
+                        margin: auto;
+                        width: 100%;
+                        .text {
+                            width: 100%;
+                        }
+                    }
+                    .title {
+                        font-size: 1.7rem;
+                        color: $between;
+                    }
+                    .text {
+                        width: 90%;
+                        padding: 1rem 0;
+                        line-height: 25px;
+                    }
+                    .built-in {
+                        p {
+                            color: $between;
+                        }
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        padding: 1rem 0;
+                        font-weight: bold;
+                        font-size: 1.2rem;
+                    }
+                    .textarea-icons {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                        align-items: center;
+                        gap: 1rem;
+                        font-size: 1.6rem;
+                        a {
+                            color: $dark;
+                        }
+                        i {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .bottom {
+                grid-area: pBottom;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .line-hor {
+                    background: $between;
+                    height: 1px;
+                    width: 90%;
+                }
+            }
+
+            &:nth-child(even) .top {
+                display: grid;
+                grid-template-columns: 1.2fr 1fr;
+                grid-template-areas: "text pImg";
+                .text {
+                    width: 90%;
+                }
+
+                .textarea {
+                    margin: 0 5rem 0 0;
+                    @media screen and (max-width: 940px) {
+                        margin: auto;
+                        width: 100%;
+                        .text {
+                            width: 100%;
+                        }
+                    }
+                }
+                @media screen and (max-width: 940px) {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr auto;
+                    grid-template-areas:
+                        "text"
+                        "pImg";
+                }
+            }
+        }
+    }
+}
