@@ -54,7 +54,7 @@ const Projects = () => {
                                     <i className="fab fa-github">
                                     </i>
                                 </a>
-                                <a target='_blank' href="https://messenger-react.netlify.app/" rel='noreferrer'>
+                                <a target='_blank' href="https://messenger-app.pages.dev/" rel='noreferrer'>
                                     <i className="fas fa-external-link-alt">
                                     </i>
                                 </a>
@@ -86,7 +86,7 @@ const Projects = () => {
                                     <i className="fab fa-github">
                                     </i>
                                 </a>
-                                <a target='_blank' href="https://idojaras-api.netlify.app/" rel='noreferrer'>
+                                <a target='_blank' href="https://weatherappapi.pages.dev/" rel='noreferrer'>
                                     <i className="fas fa-external-link-alt">
                                     </i>
                                 </a>
