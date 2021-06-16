@@ -1,6 +1,8 @@
 import React from 'react';
 
+
 const Projects = () => {
+
     return (
         <div className='projects'>
             <h1>Munkáim</h1>
@@ -68,12 +70,12 @@ const Projects = () => {
                 <div className='project'>
                     <div className="top">
                         <div className='p-img'>
-                            <img src='https://i.postimg.cc/dVyHLyTL/weatherapp.png' alt="" />
+                            <img src='https://i.postimg.cc/kgg9NbQX/weather.png' alt="" />
                         </div>
                         <div className='textarea'>
                             <h2 className='title'>Időjárás</h2>
                             <p className='text'>
-                                A weboldal megmutajta bármelyik város jelenlegi hőmérsékletét egy ingyenes API (OpenWeatherMap) használatával.
+                                A weboldal megmutajta bármelyik város jelenlegi időjárásának információit egy ingyenes API (OpenWeatherMap) használatával.
                             </p>
                             <div className="built-in">
                                 <p>Készült: </p>
