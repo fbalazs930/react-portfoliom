@@ -84,11 +84,11 @@ const Projects = () => {
                                 <i className="fab fa-js" title="JavaScript"></i>
                             </div>
                             <div className='textarea-icons'>
-                                <a target='_blank' href="https://github.com/fbalazs930/weatherappapi" rel='noreferrer'>
+                                <a target='_blank' href="https://github.com/fbalazs930/idojaras-api-react" rel='noreferrer'>
                                     <i className="fab fa-github">
                                     </i>
                                 </a>
-                                <a target='_blank' href="https://weatherappapi.pages.dev/" rel='noreferrer'>
+                                <a target='_blank' href="https://idojaras-api-react.pages.dev/" rel='noreferrer'>
                                     <i className="fas fa-external-link-alt">
                                     </i>
                                 </a>
