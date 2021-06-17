@@ -222,8 +222,8 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: 40;
   display: -ms-grid;
   display: grid;
@@ -271,55 +271,53 @@
   border-radius: 3px;
   -o-object-fit: contain;
      object-fit: contain;
-  width: auto;
   max-height: 500px;
+  width: 100%;
 }
 
 .projects .projects-container .project .full-screen-image .s-images {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   gap: 1.5rem;
-  padding: 0 0 1rem 0;
+  padding: 0 1rem 0 1rem;
+  width: 90vw;
+  margin: auto;
+}
+
+@media only screen and (max-width: 1146px) {
+  .projects .projects-container .project .full-screen-image .s-images {
+    width: 100vw;
+  }
+}
+
+@media only screen and (max-width: 1030px) {
+  .projects .projects-container .project .full-screen-image .s-images {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin: auto 0;
+  }
 }
 
 .projects .projects-container .project .full-screen-image .s-images img {
   height: 14vh;
   width: auto;
   cursor: pointer;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  margin: 0 0 1rem 0;
 }
 
 .projects .projects-container .project .full-screen-image .s-images img:hover {
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
   -webkit-transform: scale(1.15);
           transform: scale(1.15);
-}
-
-.projects .projects-container .project .full-screen-image .arrows {
-  color: #f1f1f1;
-  font-size: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 2rem;
-}
-
-.projects .projects-container .project .full-screen-image .arrows i {
-  cursor: pointer;
 }
 /*# sourceMappingURL=Projects.css.map */

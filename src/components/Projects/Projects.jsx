@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import projectData from './ProjectsData.jsx';
+import ScrollContainer from 'react-indiana-drag-scroll'
 
 const Projects = () => {
     const [click, setClick] = useState(false);
@@ -68,11 +69,11 @@ const Projects = () => {
                                 <div className="f-img">
                                     <img src={project.images[id].src} alt='Project' />
                                 </div>
-                                <div className="s-images">
+                                <ScrollContainer className="s-images" hideScrollbars='false'>
                                     {project.images.map(img => (
                                         <img onClick={() => { setId(img.id) }} key={img.id} src={img.src} alt='project' />
                                     ))}
-                                </div>
+                                </ScrollContainer>
                             </div>
                         }
                     </div>
