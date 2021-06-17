@@ -71,6 +71,7 @@
      object-fit: contain;
   height: 100%;
   width: 100%;
+  cursor: pointer;
 }
 
 .projects .projects-container .project .top .textarea {
@@ -215,7 +216,7 @@
 }
 
 .projects .projects-container .project .full-screen-image {
-  background-color: #202020e8;
+  background-color: #17252a74;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -223,11 +224,11 @@
           transform: translate(-50%, -50%);
   width: 100vw;
   height: 100vh;
-  z-index: 4;
+  z-index: 40;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 14% 72% 14%;
-      grid-template-rows: 14% 72% 14%;
+  -ms-grid-rows: 8% 72% 20%;
+      grid-template-rows: 8% 72% 20%;
 }
 
 .projects .projects-container .project .full-screen-image .exit {
@@ -263,26 +264,44 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  gap: 1rem;
 }
 
 .projects .projects-container .project .full-screen-image .f-img img {
   border-radius: 3px;
-  padding: 1rem;
-  background-color: #fff;
   -o-object-fit: contain;
      object-fit: contain;
-  width: 100%;
+  width: auto;
   max-height: 500px;
 }
 
-.projects .projects-container .project .full-screen-image .f-img .s-images {
+.projects .projects-container .project .full-screen-image .s-images {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.5rem;
+  padding: 0 0 1rem 0;
 }
 
-.projects .projects-container .project .full-screen-image .f-img .s-images img {
-  height: 10vh;
+.projects .projects-container .project .full-screen-image .s-images img {
+  height: 14vh;
+  width: auto;
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.projects .projects-container .project .full-screen-image .s-images img:hover {
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 .projects .projects-container .project .full-screen-image .arrows {

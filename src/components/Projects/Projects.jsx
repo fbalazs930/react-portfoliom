@@ -1,29 +1,28 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import projectData from './ProjectsData.jsx';
 
 const Projects = () => {
     const [click, setClick] = useState(false);
     const [id, setId] = useState(0);
-    const decrease = () => {
-        if (id - 1 >= 0) {
-            setId(id - 1)
+    const close = (e) => {
+        if (e.keyCode === 27) {
+            setClick(false)
         }
-    }
-    const increase = () => {
-        if (id + 1 <= projectData[id].images.length - 1) {
-            setId(id + 1);
-        }
-    }
-    const updateId = (e) => {
-        if (e.keyCode === 27) { setClick(false); }
-        if (e.keyCode === 37) { decrease() }
-        if (e.keyCode === 39) { increase() }
     }
     useEffect(() => {
-        window.addEventListener('keyup', updateId);
-        return () => { window.removeEventListener('keyup', updateId) }
-    }, [id])
+        window.addEventListener('keyup', close)
+        return () => { window.removeEventListener('keyup', close) }
+    }, [])
+    const clicked = (e) => {
+        let t = e.target.className;
+        if (t === 'exit' || t === 'f-img' || t === 's-images') {
+            setClick(false);
+        }
+    }
+    useEffect(() => {
+        window.addEventListener('click', clicked)
+        return () => { window.removeEventListener('click', clicked) }
+    }, [])
     return (
         <div className='projects'>
             <h1>Munkáim</h1>
@@ -68,19 +67,11 @@ const Projects = () => {
                                 </div>
                                 <div className="f-img">
                                     <img src={project.images[id].src} alt='Project' />
+                                </div>
                                 <div className="s-images">
-                                    {project.images.map(img=>(
-                                        <img onClick={()=>{setId(img.id)}} key={img.id} src={img.src} alt='project'/>
+                                    {project.images.map(img => (
+                                        <img onClick={() => { setId(img.id) }} key={img.id} src={img.src} alt='project' />
                                     ))}
-                                </div>
-                                </div>
-                                <div className="arrows">
-                                    <i className="fas fa-arrow-alt-circle-left"
-                                        onClick={decrease}>
-                                    </i>
-                                    <i className="fas fa-arrow-alt-circle-right"
-                                        onClick={increase}>
-                                    </i>
                                 </div>
                             </div>
                         }
