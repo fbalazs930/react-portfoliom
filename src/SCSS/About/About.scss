@@ -1,6 +1,6 @@
 .about {
     min-height: 90vh;
-    background: $light;
+    background: var(--light);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -59,7 +59,7 @@
                 h2 {
                     padding: 0 1rem 1.5rem 1rem;
                     text-align: center;
-                    color: $between;
+                    color: var(--between);
                 }
                 ul {
                     display: flex;

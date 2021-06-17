@@ -1,5 +1,12 @@
+:root {
+  --light: #feffff;
+  --between: #2b7a78;
+  --dark: #17252a;
+  --titleSize: clamp(1.9rem, 6vw, 2.5rem);
+}
+
 #iconLight {
-  color: #feffff;
+  color: var(--light);
 }
 
 #iconDark {
@@ -41,13 +48,13 @@ strong {
 
 .App {
   min-height: 100vh;
-  color: #17252a;
+  color: var(--dark);
 }
 
 .App .bg {
   width: 100vw;
   height: 100vh;
-  background: #17252a;
+  background: var(--dark);
   position: fixed;
   top: 0;
   left: 0;

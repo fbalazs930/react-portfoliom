@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: $light;
+    color: var(--light);
     .home-content {
         padding: 0 0 20vh 0;
         h1 {
@@ -16,15 +16,15 @@
         .home-btn button {
             cursor: pointer;
             font-size: clamp(1rem, 4vw, 1.3rem);
-            background: $between;
+            background: var(--between);
             color: #fff;
-            border: 2px solid $between;
+            border: 2px solid var(--between);
             padding: 0.8rem 1.3rem;
             position: relative;
             z-index: 1;
             overflow: hidden;
             &:hover {
-                color: $between;
+                color: var(--between);
                 &::after {
                     transition: all 0.3s ease-out;
                     transform: skewX(-45deg) scale(1, 1);

@@ -1,9 +1,11 @@
-$titleSize: clamp(1.9rem, 6vw, 2.5rem);
-$dark: #17252a;
-$between: #2b7a78;
-$light: #feffff;
+:root {
+    --light: #feffff;
+    --between: #2b7a78;
+    --dark: #17252a;
+    --titleSize: clamp(1.9rem, 6vw, 2.5rem);
+}
 #iconLight {
-    color: $light;
+    color: var(--light);
 }
 #iconDark {
     color: #0a1013;
@@ -35,11 +37,11 @@ strong {
         background: #eeeeee;
     }
 }
-.App{
+.App {
     .bg {
         width: 100vw;
         height: 100vh;
-        background: $dark;
+        background: var(--dark);
         position: fixed;
         top: 0;
         left: 0;
@@ -55,5 +57,5 @@ strong {
         z-index: -1;
     }
     min-height: 100vh;
-    color: $dark;
+    color: var(--dark);
 }

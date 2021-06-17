@@ -1,6 +1,6 @@
 .about {
   min-height: 90vh;
-  background: #2222229b;
+  background: var(--light);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14,16 +14,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow-x: hidden;
+  gap: 2rem;
 }
 
 .about .about-container {
-  overflow-x: hidden;
-  min-height: 40vh;
-  width: 70vw;
-}
-
-.about .about-container .desc {
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,44 +26,130 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  gap: 2rem;
+  width: calc(70vw + 7rem);
 }
 
-.about .about-container .desc .text {
-  padding: 1rem 0;
+.about .about-container .top {
+  min-height: 40vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1.4fr;
+      grid-template-columns: 1fr 1.4fr;
+      grid-template-areas: "illus desc";
+  gap: 4rem;
 }
 
-.about .about-container .desc .text p {
-  padding: 1rem 0;
+@media screen and (max-width: 940px) {
+  .about .about-container .top {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: "desc" "illus";
+    gap: 1rem;
+  }
+  .about .about-container .top .text {
+    padding: 0 1rem;
+  }
 }
 
-.about .about-container .desc .langs p {
-  padding: 0 0 1rem 0;
-}
-
-.about .about-container .desc .langs ul {
+.about .about-container .top .about-illustration {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: illus;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 2rem;
 }
 
-@media only screen and (max-width: 520px) {
-  .about .about-container .desc .langs ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+.about .about-container .top .about-illustration svg {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+}
+
+.about .about-container .top .text {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: desc;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 27px;
+}
+
+.about .about-container .top .text p {
+  margin: 1rem 0;
+  padding: 0 0.3rem;
+  font-size: clamp(1.1rem, 1vw, 2rem);
+}
+
+.about .about-container .bottom .langs h2 {
+  padding: 0 1rem 1.5rem 1rem;
+  text-align: center;
+  color: var(--between);
+}
+
+.about .about-container .bottom .langs ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 4rem;
+  font-size: 1.1rem;
+}
+
+.about .about-container .bottom .langs ul i {
+  font-size: 1.7rem;
+}
+
+@media only screen and (max-width: 500px) {
+  .about .about-container .bottom .langs ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem 4rem 0 4rem;
   }
+}
+
+.about .about-container .bottom .langs ul .lang {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
 }
 /*# sourceMappingURL=About.css.map */

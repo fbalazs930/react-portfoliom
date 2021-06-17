@@ -1,5 +1,12 @@
+:root {
+  --light: #feffff;
+  --between: #2b7a78;
+  --dark: #17252a;
+  --titleSize: clamp(1.9rem, 6vw, 2.5rem);
+}
+
 #iconLight {
-  color: #feffff;
+  color: var(--light);
 }
 
 #iconDark {
@@ -41,13 +48,13 @@ strong {
 
 .App {
   min-height: 100vh;
-  color: #17252a;
+  color: var(--dark);
 }
 
 .App .bg {
   width: 100vw;
   height: 100vh;
-  background: #17252a;
+  background: var(--dark);
   position: fixed;
   top: 0;
   left: 0;
@@ -66,7 +73,7 @@ strong {
 
 .about {
   min-height: 90vh;
-  background: #feffff;
+  background: var(--light);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -167,7 +174,7 @@ strong {
 .about .about-container .bottom .langs h2 {
   padding: 0 1rem 1.5rem 1rem;
   text-align: center;
-  color: #2b7a78;
+  color: var(--between);
 }
 
 .about .about-container .bottom .langs ul {
@@ -221,7 +228,7 @@ strong {
 
 .cv {
   min-height: 90vh;
-  background: #feffff;
+  background: var(--light);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -239,7 +246,7 @@ strong {
 }
 
 .cv h1 {
-  font-size: clamp(1.9rem, 6vw, 2.5rem);
+  font-size: var(--titleSize);
 }
 
 .cv .cv-container {
@@ -293,9 +300,9 @@ strong {
 .cv .cv-container .text div button {
   cursor: pointer;
   font-size: clamp(1rem, 4vw, 1.3rem);
-  background: #2b7a78;
+  background: var(--between);
   color: #fff;
-  border: 2px solid #2b7a78;
+  border: 2px solid var(--between);
   padding: 0.8rem 1.3rem;
   position: relative;
   z-index: 1;
@@ -303,7 +310,7 @@ strong {
 }
 
 .cv .cv-container .text div button:hover {
-  color: #2b7a78;
+  color: var(--between);
 }
 
 .cv .cv-container .text div button:hover::after {
@@ -364,7 +371,7 @@ strong {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #feffff;
+  color: var(--light);
 }
 
 .home .home-content {
@@ -383,9 +390,9 @@ strong {
 .home .home-content .home-btn button {
   cursor: pointer;
   font-size: clamp(1rem, 4vw, 1.3rem);
-  background: #2b7a78;
+  background: var(--between);
   color: #fff;
-  border: 2px solid #2b7a78;
+  border: 2px solid var(--between);
   padding: 0.8rem 1.3rem;
   position: relative;
   z-index: 1;
@@ -393,7 +400,7 @@ strong {
 }
 
 .home .home-content .home-btn button:hover {
-  color: #2b7a78;
+  color: var(--between);
 }
 
 .home .home-content .home-btn button:hover::after {
@@ -460,13 +467,13 @@ strong {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: 0 3px 6px -2px #17252a;
-          box-shadow: 0 3px 6px -2px #17252a;
+  -webkit-box-shadow: 0 3px 6px -2px var(--dark);
+          box-shadow: 0 3px 6px -2px var(--dark);
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 4;
-  color: #feffff;
+  color: var(--light);
 }
 
 @media only screen and (max-width: 768px) {
@@ -545,7 +552,7 @@ strong {
     gap: 0;
     padding: 100px 0;
     left: -1000px;
-    background-color: #17252a;
+    background-color: var(--dark);
     -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
   }
@@ -607,16 +614,16 @@ strong {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #feffff;
+  background-color: var(--light);
 }
 
 .projects h1 {
-  font-size: clamp(1.9rem, 6vw, 2.5rem);
+  font-size: var(--titleSize);
   margin: 5rem 0;
 }
 
 .projects .projects-container {
-  background-color: #feffff;
+  background-color: var(--light);
   min-height: 70vh;
   width: calc(70vw + 3.5rem);
   overflow-x: hidden;
@@ -654,13 +661,13 @@ strong {
   }
 }
 
-.projects .projects-container .project .top .p-img {
+.projects .projects-container .project .top .p-thumbnail {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: pImg;
 }
 
-.projects .projects-container .project .top .p-img img {
+.projects .projects-container .project .top .p-thumbnail img {
   -o-object-fit: contain;
      object-fit: contain;
   height: 100%;
@@ -700,7 +707,7 @@ strong {
 
 .projects .projects-container .project .top .textarea .title {
   font-size: 1.7rem;
-  color: #2b7a78;
+  color: var(--between);
 }
 
 .projects .projects-container .project .top .textarea .text {
@@ -723,7 +730,7 @@ strong {
 }
 
 .projects .projects-container .project .top .textarea .built-in p {
-  color: #2b7a78;
+  color: var(--between);
 }
 
 .projects .projects-container .project .top .textarea .textarea-icons {
@@ -744,7 +751,7 @@ strong {
 }
 
 .projects .projects-container .project .top .textarea .textarea-icons a {
-  color: #17252a;
+  color: var(--dark);
 }
 
 .projects .projects-container .project .top .textarea .textarea-icons i {
@@ -767,7 +774,7 @@ strong {
 }
 
 .projects .projects-container .project .bottom .line-hor {
-  background: #2b7a78;
+  background: var(--between);
   height: 1px;
   width: 90%;
 }
@@ -808,9 +815,99 @@ strong {
   }
 }
 
+.projects .projects-container .project .full-screen-image {
+  background-color: #202020e8;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  z-index: 4;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 14% 72% 14%;
+      grid-template-rows: 14% 72% 14%;
+}
+
+.projects .projects-container .project .full-screen-image .exit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 1rem 2rem 0 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: #f1f1f1;
+  font-size: 2rem;
+}
+
+.projects .projects-container .project .full-screen-image .exit i {
+  cursor: pointer;
+}
+
+.projects .projects-container .project .full-screen-image .f-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.projects .projects-container .project .full-screen-image .f-img img {
+  border-radius: 3px;
+  padding: 1rem;
+  background-color: #fff;
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  max-height: 500px;
+}
+
+.projects .projects-container .project .full-screen-image .f-img .s-images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.projects .projects-container .project .full-screen-image .f-img .s-images img {
+  height: 10vh;
+}
+
+.projects .projects-container .project .full-screen-image .arrows {
+  color: #f1f1f1;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+}
+
+.projects .projects-container .project .full-screen-image .arrows i {
+  cursor: pointer;
+}
+
 .contact {
   min-height: 90vh;
-  background-color: #feffff;
+  background-color: var(--light);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -866,15 +963,15 @@ strong {
   border-radius: 5px;
   outline: none;
   border: none;
-  -webkit-box-shadow: 0 0 0 1px #2b7a78;
-          box-shadow: 0 0 0 1px #2b7a78;
+  -webkit-box-shadow: 0 0 0 1px var(--between);
+          box-shadow: 0 0 0 1px var(--between);
   padding: 0.5rem;
 }
 
 .contact form input:focus,
 .contact form textarea:focus {
-  -webkit-box-shadow: 0 0 0 2px #2b7a78;
-          box-shadow: 0 0 0 2px #2b7a78;
+  -webkit-box-shadow: 0 0 0 2px var(--between);
+          box-shadow: 0 0 0 2px var(--between);
 }
 
 .contact form textarea {
@@ -886,9 +983,9 @@ strong {
 .contact form button {
   cursor: pointer;
   font-size: clamp(1rem, 4vw, 1.3rem);
-  background: #2b7a78;
+  background: var(--between);
   color: #fff;
-  border: 2px solid #2b7a78;
+  border: 2px solid var(--between);
   padding: 0.8rem 1.3rem;
   position: relative;
   z-index: 1;
@@ -896,7 +993,7 @@ strong {
 }
 
 .contact form button:hover {
-  color: #2b7a78;
+  color: var(--between);
 }
 
 .contact form button:hover::after {
@@ -931,7 +1028,7 @@ strong {
 }
 
 .contact .c-icons a {
-  color: #17252a;
+  color: var(--dark);
 }
 
 @media only screen and (max-width: 940px) {

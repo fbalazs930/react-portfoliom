@@ -1,6 +1,6 @@
 .contact {
     min-height: 90vh;
-    background-color: $light;
+    background-color: var(--light);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,10 +27,10 @@
             border-radius: 5px;
             outline: none;
             border: none;
-            box-shadow: 0 0 0 1px $between;
+            box-shadow: 0 0 0 1px var(--between);
             padding: 0.5rem;
             &:focus {
-                box-shadow: 0 0 0 2px $between;
+                box-shadow: 0 0 0 2px var(--between);
             }
         }
         textarea {
@@ -41,15 +41,15 @@
         button {
             cursor: pointer;
             font-size: clamp(1rem, 4vw, 1.3rem);
-            background: $between;
+            background: var(--between);
             color: #fff;
-            border: 2px solid $between;
+            border: 2px solid var(--between);
             padding: 0.8rem 1.3rem;
             position: relative;
             z-index: 1;
             overflow: hidden;
             &:hover {
-                color: $between;
+                color: var(--between);
                 &::after {
                     transition: all 0.3s ease-out;
                     transform: skewX(-45deg) scale(1, 1);
@@ -74,7 +74,7 @@
     position: relative;
     .c-icons {
         a {
-            color: $dark;
+            color: var(--dark);
         }
         position: static;
         margin: 0 auto 0 0;

@@ -1,101 +1,91 @@
-import React from 'react';
-
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useState, useEffect } from 'react';
+import projectData from './ProjectsData.jsx';
 
 const Projects = () => {
-
+    const [click, setClick] = useState(false);
+    const [id, setId] = useState(0);
+    const decrease = () => {
+        if (id - 1 >= 0) {
+            setId(id - 1)
+        }
+    }
+    const increase = () => {
+        if (id + 1 <= projectData[id].images.length - 1) {
+            setId(id + 1);
+        }
+    }
+    const updateId = (e) => {
+        if (e.keyCode === 27) { setClick(false); }
+        if (e.keyCode === 37) { decrease() }
+        if (e.keyCode === 39) { increase() }
+    }
+    useEffect(() => {
+        window.addEventListener('keyup', updateId);
+        return () => { window.removeEventListener('keyup', updateId) }
+    }, [id])
     return (
         <div className='projects'>
             <h1>Munkáim</h1>
             <div className='projects-container'>
-                <div className='project'>
-                    <div className="top">
-                        <div className='p-img'>
-                            <img src='https://i.postimg.cc/4yCfztxn/guitar-shop.png' alt="" />
-                        </div>
-                        <div className='textarea'>
-                            <h2 className='title'>Gitár Shop</h2>
-                            <p className='text'>
-                                Egy létező gitárgyártó cég weboldalának másolata.
-                            </p>
-                            <div className="built-in">
-                                <p>Készült: </p>
-                                <i className="fab fa-react" title="React"></i>
+                {projectData.map(project => (
+                    <div className='project' key={project.id}>
+                        <div className="top">
+                            <div className='p-thumbnail'>
+                                <img onClick={() => { setClick(true) }} src={project.pThumbnail} alt="" />
                             </div>
-                            <div className='textarea-icons'>
-                                <a target='_blank' href="https://github.com/fbalazs930/guitar-shop" rel='noreferrer'>
-                                    <i className="fab fa-github">
-                                    </i>
-                                </a>
-                                <a target='_blank' href="https://guitar-shop.pages.dev/" rel='noreferrer'>
-                                    <i className="fas fa-external-link-alt">
-                                    </i>
-                                </a>
+                            <div className='textarea'>
+                                <h2 className='title'>{project.title}</h2>
+                                <p className='text'>
+                                    {project.text}
+                                </p>
+                                <div className="built-in">
+                                    <p>Készült: </p>
+                                    {project.builtInIcons.map(bi => (
+                                        <i key={bi.id} className={bi.className} title="React"></i>
+                                    ))}
+                                </div>
+                                <div className='textarea-icons'>
+                                    <a target='_blank' href={project.gitHubLink} rel='noreferrer'>
+                                        <i className="fab fa-github">
+                                        </i>
+                                    </a>
+                                    <a target='_blank' href={project.website} rel='noreferrer'>
+                                        <i className="fas fa-external-link-alt">
+                                        </i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
+                        <div className="bottom">
+                            <div className="line-hor"></div>
+                        </div>
+                        {click &&
+                            <div className="full-screen-image">
+                                <div className="exit">
+                                    <i onClick={() => { setClick(false) }} className="fas fa-times-circle">
+                                    </i>
+                                </div>
+                                <div className="f-img">
+                                    <img src={project.images[id].src} alt='Project' />
+                                <div className="s-images">
+                                    {project.images.map(img=>(
+                                        <img onClick={()=>{setId(img.id)}} key={img.id} src={img.src} alt='project'/>
+                                    ))}
+                                </div>
+                                </div>
+                                <div className="arrows">
+                                    <i className="fas fa-arrow-alt-circle-left"
+                                        onClick={decrease}>
+                                    </i>
+                                    <i className="fas fa-arrow-alt-circle-right"
+                                        onClick={increase}>
+                                    </i>
+                                </div>
+                            </div>
+                        }
                     </div>
-                    <div className="bottom">
-                        <div className="line-hor"></div>
-                    </div>
-                </div>
-                <div className='project'>
-                    <div className="top">
-                        <div className='p-img'>
-                            <img src='https://i.postimg.cc/pXqCrBTW/messenger.png' alt="" />
-                        </div>
-                        <div className='textarea'>
-                            <h2 className='title'>Messenger App</h2>
-                            <p className='text'>
-                                Facebook Messengerhez hasonló üzenetküldő App. Firebase adatbázissal készült, amely lehetővé teszi az üzenetek megőrzését.
-                            </p>
-                            <div className="built-in">
-                                <p>Készült: </p>
-                                <i className="fab fa-react" title="React"></i>
-                            </div>
-                            <div className='textarea-icons'>
-                                <a target='_blank' href="https://github.com/fbalazs930/messenger-app" rel='noreferrer'>
-                                    <i className="fab fa-github">
-                                    </i>
-                                </a>
-                                <a target='_blank' href="https://messenger-app.pages.dev/" rel='noreferrer'>
-                                    <i className="fas fa-external-link-alt">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="bottom">
-                        <div className="line-hor"></div>
-                    </div>
-                </div>
-                <div className='project'>
-                    <div className="top">
-                        <div className='p-img'>
-                            <img src='https://i.postimg.cc/kgg9NbQX/weather.png' alt="" />
-                        </div>
-                        <div className='textarea'>
-                            <h2 className='title'>Időjárás</h2>
-                            <p className='text'>
-                                A weboldal megmutajta bármelyik város jelenlegi időjárásának információit egy ingyenes API (OpenWeatherMap) használatával.
-                            </p>
-                            <div className="built-in">
-                                <p>Készült: </p>
-                                <i className="fab fa-html5" title="HTML"></i>
-                                <i className="fab fa-css3-alt" title="CSS"></i>
-                                <i className="fab fa-js" title="JavaScript"></i>
-                            </div>
-                            <div className='textarea-icons'>
-                                <a target='_blank' href="https://github.com/fbalazs930/idojaras-api-react" rel='noreferrer'>
-                                    <i className="fab fa-github">
-                                    </i>
-                                </a>
-                                <a target='_blank' href="https://idojaras-api-react.pages.dev/" rel='noreferrer'>
-                                    <i className="fas fa-external-link-alt">
-                                    </i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                ))}
             </div>
         </div>
     )
