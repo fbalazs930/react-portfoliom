@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';
 
 const CV = () => {
     return (
-        <div className='cv'>
+        <div className='cv'>    
             <h1>Önéletrajz</h1>
             <div className="cv-container">
                 <div className="text">

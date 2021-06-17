@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import projectData from './ProjectsData.jsx';
-import ScrollContainer from 'react-indiana-drag-scroll'
+import ScrollContainer from 'react-indiana-drag-scroll';
 
 const Projects = () => {
     const [click, setClick] = useState(false);
     const [id, setId] = useState(0);
+    const [images, setImages] = useState([]);
     const close = (e) => {
         if (e.keyCode === 27) {
             setClick(false)
@@ -27,12 +28,13 @@ const Projects = () => {
     return (
         <div className='projects'>
             <h1>Munkáim</h1>
+
             <div className='projects-container'>
                 {projectData.map(project => (
                     <div className='project' key={project.id}>
                         <div className="top">
                             <div className='p-thumbnail'>
-                                <img onClick={() => { setClick(true) }} src={project.pThumbnail} alt="" />
+                                <img onClick={() => { setClick(true); setImages(project.images) }} src={project.pThumbnail} alt="" />
                             </div>
                             <div className='textarea'>
                                 <h2 className='title'>{project.title}</h2>
@@ -60,24 +62,25 @@ const Projects = () => {
                         <div className="bottom">
                             <div className="line-hor"></div>
                         </div>
-                        {click &&
-                            <div className="full-screen-image">
-                                <div className="exit">
-                                    <i onClick={() => { setClick(false) }} className="fas fa-times-circle">
-                                    </i>
-                                </div>
-                                <div className="f-img">
-                                    <img src={project.images[id].src} alt='Project' />
-                                </div>
-                                <ScrollContainer className="s-images" hideScrollbars='false'>
-                                    {project.images.map(img => (
-                                        <img onClick={() => { setId(img.id) }} key={img.id} src={img.src} alt='project' />
-                                    ))}
-                                </ScrollContainer>
-                            </div>
-                        }
                     </div>
                 ))}
+
+                {click &&
+                    <div className="full-screen-image">
+                        <div className="exit">
+                            <i onClick={() => { setClick(false) }} className="fas fa-times-circle">
+                            </i>
+                        </div>
+                        <div className="f-img">
+                            <img src={images[id].src} alt='Project' />
+                        </div>
+                        <ScrollContainer className="scroll-container" hideScrollbars='false'>
+                            {images.map(img => (
+                                <img onClick={() => { setId(img.id) }} key={img.id} src={img.src} alt='Project' />
+                            ))}
+                        </ScrollContainer>
+                    </div>
+                }
             </div>
         </div>
     )
