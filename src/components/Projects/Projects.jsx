@@ -16,8 +16,8 @@ const Projects = () => {
         return () => { window.removeEventListener('keyup', close) }
     }, [])
     const clicked = (e) => {
-        let t = e.target.className;
-        if (t === 'exit' || t === 'f-img' || t === 's-images') {
+        let c = e.target.className;
+        if (c === 'exit' || c === 'f-img' || c === 's-images' || c === 'full-screen-image' || c === 'scroll-container indiana-scroll-container indiana-scroll-container--hide-scrollbars_false') {
             setClick(false);
         }
     }
@@ -28,7 +28,6 @@ const Projects = () => {
     return (
         <div className='projects'>
             <h1>Munkáim</h1>
-
             <div className='projects-container'>
                 {projectData.map(project => (
                     <div className='project' key={project.id}>
