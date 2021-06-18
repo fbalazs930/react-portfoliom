@@ -313,6 +313,7 @@
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   margin: 0 0 1rem 0;
+  z-index: 101;
 }
 
 .projects .full-screen-image .scroll-container img:hover {

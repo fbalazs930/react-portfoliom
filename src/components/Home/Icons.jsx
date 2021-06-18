@@ -12,7 +12,7 @@ const Icons = () => {
     });
     return (
         <div className='icons'>
-            <a target='_blank' href="https://www.linkedin.com/in/farkas-bal%C3%A1zs-3321a5204/" rel="noreferrer">
+            <a target='_blank' href="https://www.linkedin.com/in/f-balazs/" rel="noreferrer">
                 <i id={color ? 'iconLight' : 'iconDark'} className="fab fa-linkedin-in"></i>
             </a>
             <a target='_blank' href="https://github.com/fbalazs930" rel="noreferrer">

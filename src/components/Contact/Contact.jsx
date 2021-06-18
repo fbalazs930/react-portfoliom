@@ -24,7 +24,7 @@ const Contact = () => {
                 <button className='send' type="submit">Küldés</button>
             </form>
             <div className='icons c-icons'>
-                <a target='_blank' href="https://www.linkedin.com/in/farkas-bal%C3%A1zs-3321a5204/" rel="noreferrer">
+                <a target='_blank' href="https://www.linkedin.com/in/f-balazs/" rel="noreferrer">
                     <i className="fab fa-linkedin-in"></i>
                 </a>
                 <a target='_blank' href="https://github.com/fbalazs930" rel="noreferrer">
