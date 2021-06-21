@@ -1,8 +1,14 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from 'react';
 import projectData from './ProjectsData.jsx';
 import ScrollContainer from 'react-indiana-drag-scroll';
 
+
+
+
 const Projects = () => {
+
+
     const [click, setClick] = useState(false);
     const [id, setId] = useState(0);
     const [images, setImages] = useState([]);
@@ -16,8 +22,7 @@ const Projects = () => {
         return () => { window.removeEventListener('keyup', close) }
     }, [])
     const clicked = (e) => {
-        let c = e.target.className;
-        if (c === 'exit' || c === 'f-img' || c === 's-images' || c === 'full-screen-image' || c === 'scroll-container indiana-scroll-container indiana-scroll-container--hide-scrollbars_false') {
+        if (e.target.className.includes("exit")) {
             setClick(false);
         }
     }
@@ -65,7 +70,7 @@ const Projects = () => {
                 ))}
 
                 {click &&
-                    <div className="full-screen-image">
+                    <div className="full-screen-image exit">
                         <div className="exit">
                             <i onClick={() => { setClick(false) }} className="fas fa-times-circle">
                             </i>

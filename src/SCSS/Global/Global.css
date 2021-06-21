@@ -70,4 +70,28 @@ strong {
   left: 0;
   z-index: -1;
 }
+
+body {
+  background: #181818;
+  -webkit-animation: loaded 1s 1;
+          animation: loaded 1s 1;
+}
+
+@-webkit-keyframes loaded {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes loaded {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 /*# sourceMappingURL=Global.css.map */

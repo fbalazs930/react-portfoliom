@@ -59,3 +59,12 @@ strong {
     min-height: 100vh;
     color: var(--dark);
 }
+
+body{
+    background: rgb(24, 24, 24);
+    animation: loaded 1s 1;
+    @keyframes loaded{
+        from{opacity: 0;}
+        to{ opacity: 1; }
+    }
+}

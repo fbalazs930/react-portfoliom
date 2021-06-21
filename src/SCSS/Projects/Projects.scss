@@ -200,11 +200,13 @@
                 }
                 @media only screen and (max-width:  560px) {
                     height: 50vh;
-                    width: auto;
                     &:hover {
                         transform: none;
                     }
                 }
+            }
+            @media only screen and (max-width:  560px) {
+                justify-content: flex-start;
             }
         }
     }

@@ -71,6 +71,30 @@ strong {
   z-index: -1;
 }
 
+body {
+  background: #181818;
+  -webkit-animation: loaded 1s 1;
+          animation: loaded 1s 1;
+}
+
+@-webkit-keyframes loaded {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes loaded {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 .about {
   min-height: 90vh;
   background: var(--light);
@@ -622,6 +646,41 @@ strong {
   margin: 5rem 0;
 }
 
+.projects .h1Anim {
+  -webkit-animation: h1Anim 1s .75;
+          animation: h1Anim 1s .75;
+}
+
+@-webkit-keyframes h1Anim {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes h1Anim {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 .projects .projects-container {
   background-color: var(--light);
   min-height: 70vh;
@@ -927,11 +986,18 @@ strong {
 @media only screen and (max-width: 560px) {
   .projects .full-screen-image .scroll-container img {
     height: 50vh;
-    width: auto;
   }
   .projects .full-screen-image .scroll-container img:hover {
     -webkit-transform: none;
             transform: none;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .projects .full-screen-image .scroll-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 

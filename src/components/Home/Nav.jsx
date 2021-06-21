@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from "react-scroll";
+import styled, { keyframes } from 'styled-components';
+import { fadeIn } from 'react-animations';
+
+const bounceAnimation = keyframes`${fadeIn}`;
+ 
+const Div = styled.div`
+  animation: 2s ${bounceAnimation};
+`;
 
 const Nav = () => {
     //#region Menu
@@ -39,7 +47,7 @@ const Nav = () => {
     };
 
     return (
-        <div className='nav' style={nav}>
+        <Div className='nav' style={nav}>
             <i onClick={scrollToTop} className="logo fab fa-wolf-pack-battalion"></i>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                 <Link onClick={closeMenu} className="nav-link" to="projects" spy={true} smooth={true} offset={-80} duration={500}>
@@ -58,7 +66,7 @@ const Nav = () => {
             <div className="menu-icon" onClick={handleClick}>
                 <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
             </div>
-        </div>
+        </Div>
     )
 }
 

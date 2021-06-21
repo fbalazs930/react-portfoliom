@@ -326,11 +326,18 @@
 @media only screen and (max-width: 560px) {
   .projects .full-screen-image .scroll-container img {
     height: 50vh;
-    width: auto;
   }
   .projects .full-screen-image .scroll-container img:hover {
     -webkit-transform: none;
             transform: none;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .projects .full-screen-image .scroll-container {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 /*# sourceMappingURL=Projects.css.map */
