@@ -30,9 +30,6 @@ const Contact = () => {
                 <a target='_blank' href="https://github.com/fbalazs930" rel="noreferrer">
                     <i className="fab fa-github"></i>
                 </a>
-                <a target='_blank' href="https://www.facebook.com/fbalazs930/" rel="noreferrer">
-                    <i className="fab fa-facebook-f"></i>
-                </a>
                 <a target='_blank' href="mailto:fbalazs930@gmail.com" rel="noreferrer">
                     <i className="fas fa-envelope"></i>
                 </a>
