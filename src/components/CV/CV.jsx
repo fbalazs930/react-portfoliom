@@ -8,7 +8,7 @@ const CV = () => {
                 <div className="text">
                     <div>
                         <h3>Az önéletrajzom a gombra kattintva tekinthető meg.</h3>
-                        <a rel="noreferrer" target='_blank' href="https://drive.google.com/file/d/1_uvSio_QgwE6ABx5Utm-lEmY93XQwSg4/view?usp=sharing">
+                        <a rel="noreferrer" target='_blank' href="https://drive.google.com/file/d/1KWTNQTGC3iVx2PTTL1dl4SRZlUXyQDl5/view?usp=sharing">
                             <button>Megnyit</button>
                         </a>
                     </div>
