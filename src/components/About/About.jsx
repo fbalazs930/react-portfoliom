@@ -11,7 +11,7 @@ const About = () => {
                     </div>
                     <div className="text">
                         <p>
-                            A webfejlesztés <strong>2018</strong> óta a szenvedélyem. Tudásomat <strong>főként</strong> az internet segítségével <strong>autodidakta</strong> módon szereztem meg, amit napról napra igyekszek fejleszteni újabb technológiák tanulásával.
+                            A webfejlesztéssel <strong>2018</strong> óta foglalkozom. Tudásomat <strong>főként</strong> az internet segítségével <strong>autodidakta</strong> módon szereztem meg, amit napról napra igyekszek fejleszteni újabb technológiák tanulásával.
                         </p>
                     </div>
                 </div>

@@ -63,9 +63,11 @@ const Projects = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="bottom">
-                            <div className="line-hor"></div>
-                        </div>
+                        {(project.id !== projectData.length-1) &&
+                            <div className="bottom">
+                                <div className="line-hor"></div>
+                            </div>
+                        }
                     </div>
                 ))}
 

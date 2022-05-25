@@ -1,26 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 
 const Contact = () => {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState("");
+
+    const [red, setRed] = useState({});// = { border: '2px solid red' };
     function sendEmail(e) {
         e.preventDefault();
-        emailjs.sendForm('service_33gx7rg', 'template_109x6fc', e.target, 'user_J1ob3Ryk5QebuFnmmgVdQ')
-            .then((result) => {
-                alert("Elküldve!");
-            }, (error) => {
-                alert("Sikertelen!");
-            });
-        e.target.reset()
+        if (name && email && message && subject) {
+            emailjs.sendForm('service_33gx7rg', 'template_109x6fc', e.target, 'user_J1ob3Ryk5QebuFnmmgVdQ')
+                .then((result) => {
+                    alert("Elküldve!");
+                }, (error) => {
+                    alert("Sikertelen!");
+                });
+            setRed();
+            setName("");
+            setEmail("");
+            setSubject("");
+            setMessage("");
+            e.target.reset()
+        }
+        else {
+            alert("Hiányzó adatok!");
+            setRed({ border: '2px solid red' });
+        }
     }
-
     return (
         <div className='contact'>
             <h1>Üzenetküldés</h1>
             <form onSubmit={sendEmail}>
-                <input className='name' type="text" placeholder="Név" name="name" />
-                <input className='email' type="email" placeholder="E-mail cím" name="email" />
-                <input type="text" placeholder="Tárgy" name="subject" />
-                <textarea className='message' placeholder="Írj valamit..." name="message"></textarea>
+                <input style={!name ? red : {}} className='name' type="text" placeholder="Név" name="name"
+                    value={name} onChange={(e) => { setName(e.target.value) }} />
+
+                <input style={!email ? red : {}} className='email' type="email" placeholder="E-mail cím" name="email"
+                    value={email} onChange={(e) => { setEmail(e.target.value) }} />
+
+                <input style={!subject ? red : {}} type="text" placeholder="Tárgy" name="subject"
+                    value={subject} onChange={(e) => { setSubject(e.target.value) }} />
+
+                <textarea style={!message ? red : {}} className='message' placeholder="Írj valamit..." name="message" value={message} onChange={(e) => { setMessage(e.target.value) }}></textarea>
+
                 <button className='send' type="submit">Küldés</button>
             </form>
             <div className='icons c-icons'>
